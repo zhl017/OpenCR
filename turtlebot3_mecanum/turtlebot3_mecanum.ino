@@ -628,7 +628,7 @@ void driveTest(uint8_t buttons)
 
   if (move[0])
   {
-    if ((abs(saved_tick[RIGHT] - current_tick[RIGHT]) <= diff_encoder))
+    if (abs(saved_tick[RIGHT] - current_tick[RIGHT]) <= diff_encoder)
     {
       goal_velocity_from_button[LINEAR_X]  = 0.05;
       goal_velocity_from_button[LINEAR_Y]  = 0.0;
