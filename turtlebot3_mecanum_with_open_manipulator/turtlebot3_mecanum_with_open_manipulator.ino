@@ -1021,7 +1021,7 @@ void sendDebuglog(void)
   DEBUG_SERIAL.println("Torque(wheel) : " + String(motor_driver.getTorque()));
   DEBUG_SERIAL.println("Torque(joint) : " + String(manipulator_driver.getTorqueState()));
 
-  int32_t encoder[WHEEL_NUM] = {0, 0};
+  int32_t encoder[WHEEL_NUM] = {0, 0, 0, 0};
   motor_driver.readEncoder(encoder[LEFT], encoder[RIGHT], encoder[R_LEFT], encoder[R_RIGHT]);
   
   DEBUG_SERIAL.println("Encoder(left) : " + String(encoder[LEFT]));
